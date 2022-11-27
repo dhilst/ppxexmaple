@@ -1,0 +1,10 @@
+(library
+ (name ppx_get_env)
+ (kind ppx_rewriter)
+ (modules ppx_get_env)
+ (libraries ppxlib))
+
+(executable
+  (name test)
+  (modules test)
+  (preprocess (pps ppx_get_env)))
